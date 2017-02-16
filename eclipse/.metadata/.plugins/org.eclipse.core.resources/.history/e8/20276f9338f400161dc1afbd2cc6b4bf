@@ -1,0 +1,21 @@
+package proxy;
+
+import nici.handlers.ItemHandler;
+
+public class ServerProxy implements IProxy {
+
+	@Override
+	public void preInit() {
+		ItemHandler.init();
+		ItemHandler.register();
+	}
+
+	@Override
+	public void init() {	
+	}
+
+	@Override
+	public void postInit() {	
+	}
+
+}

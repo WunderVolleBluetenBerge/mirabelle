@@ -1,0 +1,29 @@
+package blocks;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.util.BlockRenderLayer;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+public class BasicBlock extends Block {
+
+	public BasicBlock (String name, Material materialIn) {
+		super(materialIn);
+		setUnlocalizedName(name);
+		setRegistryName(name);
+		this.setCreativeTab(CreativeTabs.MATERIALS);
+	}
+	
+	@SideOnly(Side.CLIENT)
+
+	  public BlockRenderLayer getBlockLayer()
+
+	  {
+
+	    return BlockRenderLayer.SOLID;
+
+	  }
+
+}

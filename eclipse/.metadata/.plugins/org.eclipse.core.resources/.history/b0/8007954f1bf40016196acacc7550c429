@@ -1,0 +1,17 @@
+package blocks;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+
+public class BasicBlock extends Block {
+
+	public BasicBlock (String name, Material materialIn) {
+		super(materialIn);
+		setUnlocalizedName(name);
+		setRegistryName(name);
+		this.setCreativeTab(CreativeTabs.MATERIALS);
+	}
+	
+
+}

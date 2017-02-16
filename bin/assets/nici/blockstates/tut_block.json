@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "nici:tut_block" }
+    }
+}

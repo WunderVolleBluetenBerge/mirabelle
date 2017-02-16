@@ -1,0 +1,8 @@
+package assets.haustiere_hunde.blockstates;
+
+public class Snippet {
+	public static void main(String[] args) {
+		iron_ore.json
+	}
+}
+

@@ -1,0 +1,11 @@
+package blocks;
+
+import net.minecraft.block.material.Material;
+
+public class BlockUraniumOre extends BasicBlock {
+
+	public BlockUraniumOre() {
+		super("uranium_ore", Material.ROCK);
+	}
+
+}

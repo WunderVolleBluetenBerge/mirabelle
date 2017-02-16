@@ -1,0 +1,12 @@
+package proxy;
+
+
+import items.ItemHandler;
+
+public class ClientProxy extends ServerProxy {
+	public void init() {
+		  ItemHandler.registerRenders();
+
+		 }
+
+}

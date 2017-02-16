@@ -1,0 +1,29 @@
+package main;
+
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+
+@Mod(modid = mirabelle.MODID)
+public class mirabelle {
+	
+	public static final String MODID = "nici";
+	
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event) {
+		System.out.println("PReInit aufgerufen");
+	}
+	
+	@EventHandler
+	public void Init(FMLInitializationEvent event) {
+		System.out.println("Init aufgerufen");	
+	}
+	
+	@EventHandler
+	public void PostInit(FMLPostInitializationEvent event) {
+		System.out.println("PostInit aufgerufen");
+	}
+
+}

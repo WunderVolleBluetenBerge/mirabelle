@@ -1,0 +1,59 @@
+package main;
+
+import blocks.BasicBlock;
+import blocks.BlockUraniumOre;
+import items.BasicItem;
+import items.ItemUranium;
+import net.minecraft.item.ItemBlock;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import proxy.ServerProxy;
+
+@Mod(modid = mirabelle.MODID)
+public class mirabelle {
+	
+	public static final String MODID = "haustiere_hunde";
+	
+	@SidedProxy(clientSide = "proxy.ClientProxy", serverSide = "proxy.ServerProxy")
+	public static ServerProxy proxy;
+	
+	//Items
+	public static ItemUranium uranium = new ItemUranium();
+	
+	//Blocks
+	public static BlockUraniumOre uraniumOre = new BlockUraniumOre();
+	
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event) {
+		//Item-Registry
+		GameRegistry.register(uranium);
+		
+		//Block-Registry
+		registerBlock(uraniumOre);
+
+	}
+	
+	@EventHandler
+	public void Init(FMLInitializationEvent event) {
+		
+	}
+	
+	@EventHandler
+	public void PostInit(FMLPostInitializationEvent event) {
+		
+	}
+	
+	public static void registerBlock(BasicBlock block) {
+		GameRegistry.register(block);
+		GameRegistry.register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
+	}
+	
+
+
+
+}

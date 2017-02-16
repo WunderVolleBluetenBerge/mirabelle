@@ -1,0 +1,28 @@
+package items;
+
+import main.mirabelle;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+
+public class BasicItem extends Item {
+	
+	protected String name;
+	
+	public BasicItem(String name) {
+		this.name = name;
+		setUnlocalizedName(name);
+		setRegistryName(name);
+	}
+	
+	public void registerItemModel() {
+		mirabelle.proxy.registerItemRenderer(this, 0, name);
+	}
+	
+	@Override
+	public BasicItem setCreativeTab(CreativeTabs tab) {
+		super.setCreativeTab(tab);
+		return this;
+		
+	}
+
+}

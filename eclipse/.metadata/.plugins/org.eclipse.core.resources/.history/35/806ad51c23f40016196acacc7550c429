@@ -1,0 +1,20 @@
+package proxy;
+
+import items.BasicItem;
+import main.mirabelle;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+
+public class ClientProxy extends ServerProxy {
+	
+	@Override
+	public void registerClientStuff() {
+		registerItemModel(mirabelle.uranium);
+		
+	}
+	
+	public static void registerItemModel(BasicItem item) {
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(mirabelle.MODID + ":" + item.getSimpleName(), "inventory"));
+	}
+
+}

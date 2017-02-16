@@ -1,0 +1,11 @@
+package items;
+
+public class ItemUranium extends BasicItem {
+
+	public ItemUranium() {
+		super("uranium");
+		setMaxStackSize(64);
+		setCreativeTab();
+	}
+
+}

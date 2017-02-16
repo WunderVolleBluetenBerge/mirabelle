@@ -1,0 +1,21 @@
+package items;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+
+public class Uranium extends Item {
+	
+	 public Uranium(String name, CreativeTabs tab){
+		  setUnlocalizedName(name);
+		  setRegistryName(name);
+		  setCreativeTab(tab);
+		 }
+		 
+		 public Uranium(String name, CreativeTabs tab, int stacksize){
+		  setUnlocalizedName(name);
+		  setRegistryName(name);
+		  setCreativeTab(tab);
+		  setMaxStackSize(stacksize);
+		 }
+
+}

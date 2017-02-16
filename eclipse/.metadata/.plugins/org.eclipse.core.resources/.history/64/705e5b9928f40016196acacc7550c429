@@ -1,0 +1,9 @@
+package items;
+
+public class ItemUranium extends BasicItem {
+
+	public ItemUranium() {
+		super("uranium");
+	}
+
+}

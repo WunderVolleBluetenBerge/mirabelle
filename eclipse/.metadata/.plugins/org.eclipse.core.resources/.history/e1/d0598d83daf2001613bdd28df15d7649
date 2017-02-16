@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "normal": [
+            { "model": "haustiere_hunde:uranium_ore"},
+               { "model": "haustiere_hunde:uranium_ore"},
+                {"model": "haustiere_hunde:uranium_ore", "y": 180},
+                {"model": "haustiere_hunde:uranium_ore"}
+        ]
+    }
+}

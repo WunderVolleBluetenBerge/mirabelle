@@ -1,0 +1,43 @@
+package main;
+
+import items.BasicItem;
+import items.ItemUranium;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import proxy.ServerProxy;
+
+@Mod(modid = mirabelle.MODID)
+public class mirabelle {
+	
+	public static final String MODID = "haustiere_hunde";
+	
+	@SidedProxy(clientSide = "proxy.ClientProxy", serverSide = "proxy.ServerProxy")
+	public static ServerProxy proxy;
+	
+	
+	public static ItemUranium uranium = new ItemUranium();
+	
+	
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event) {
+
+	}
+	
+	@EventHandler
+	public void Init(FMLInitializationEvent event) {
+		
+	}
+	
+	@EventHandler
+	public void PostInit(FMLPostInitializationEvent event) {
+		
+	}
+	
+
+
+}

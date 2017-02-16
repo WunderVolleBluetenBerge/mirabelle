@@ -1,0 +1,12 @@
+package items;
+
+import net.minecraft.creativetab.CreativeTabs;
+
+public class ItemNiciItem extends ModItem {
+
+	public ItemNiciItem(String name, CreativeTabs tab) {
+		super(name, tab);
+
+	}
+
+}

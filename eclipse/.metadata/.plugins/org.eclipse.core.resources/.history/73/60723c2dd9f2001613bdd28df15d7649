@@ -1,0 +1,10 @@
+{
+    "parent": "haustiere_hunde:block/uranium_ore",
+    "display": {
+        "thirdperson": {
+            "rotation": [ 10, -45, 170 ],
+            "translation": [ 0, 1.5, -2.75 ],
+            "scale": [ 0.125, 0.125, 0.125 ]
+        }
+    }
+}

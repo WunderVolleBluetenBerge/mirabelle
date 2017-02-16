@@ -1,0 +1,32 @@
+package proxy;
+
+import items.BasicItem;
+import main.mirabelle;
+import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.item.Item;
+
+public class ClientProxy extends ServerProxy{
+	
+	@Override
+	public void registerClientStuff() {
+		
+		//Items
+		registerItemTexture(mirabelle.uranium);
+		
+		//Blocks
+		registerBlockTexture(mirabelle.uranium_ore);
+
+	}
+	
+	public static void registerItemTexture(Item item) {
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+	}
+	
+	public static void registerBlockTexture(Block block) {
+		registerItemTexture(Item.getItemFromBlock(block));
+		
+	}
+
+}
